@@ -1,0 +1,122 @@
+/* Estilo general del body: fondo claro y altura mínima de la ventana */
+body {
+  background: #f6f6f6;
+  min-height: 100vh;
+}
+
+/* Centra el contenido principal vertical y horizontalmente */
+.background {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Título principal: grande, color tenue, fuente ligera y centrado */
+.title {
+  font-size: 100px;
+  color: #d8cfd1;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0.3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Contenedor de la lista de tareas: fondo blanco, sombra, bordes redondeados */
+.todo-container {
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px #0002, 0 1.5px 8px #8881;
+  width: 460px;
+  border-radius: 5px;
+  padding: 0;
+  position: relative;
+}
+
+/* Elimina los estilos por defecto de la lista */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo de cada tarea: tamaño, color, padding, fuente y transición */
+li {
+  font-size: 28px;
+  color: #b6b6b6;
+  border-bottom: 1px solid #eee;
+  padding: 22px 30px 10px 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s;
+}
+
+/* El último elemento de la lista no tiene borde inferior */
+li:last-child {
+  border-bottom: none;
+}
+
+/* Mensaje cuando no hay tareas: color gris, cursiva y centrado */
+.no-tasks {
+  color: #bbb;
+  font-style: italic;
+  text-align: center;
+  font-size: 23px;
+  padding: 18px 0 18px 0;
+}
+
+/* Estilo del input de texto: grande, sin borde, fuente clara */
+input[type="text"] {
+  width: 100%;
+  font-size: 32px;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #454545;
+  font-family: inherit;
+  font-weight: 100;
+}
+
+/* Tarea activa: color oscuro y transición de fondo */
+.todo-item {
+  color: #454545;
+  transition: background 0.15s;
+}
+
+/* Al pasar el mouse sobre la tarea, cambia el fondo */
+.todo-item:hover {
+  background: #f9f9f9;
+}
+
+/* Icono de eliminar: oculto por defecto, aparece al hacer hover */
+.trash {
+  margin-left: auto;
+  color: #b6b6b6;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+  font-size: 21px;
+}
+
+/* Muestra el icono de eliminar al pasar el mouse sobre la tarea */
+.todo-item:hover .trash {
+  opacity: 1;
+}
+
+/* Contador de tareas restantes: pequeño, color tenue y alineado a la izquierda */
+.task-counter {
+  font-size: 15px;
+  color: #bdbdbd;
+  opacity: 0.6;
+  padding: 12px 0 16px 28px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+  letter-spacing: 1px;
+}
